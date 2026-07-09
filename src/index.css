@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-navy-900 text-slate-200 font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-white tracking-tight;
+  }
+  /* Visible keyboard focus for accessibility */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #5B8DEF;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-block text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-brand-orange bg-brand-orange/10 border border-brand-orange/30 rounded-full px-4 py-1.5;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-blueLight via-brand-blue to-brand-orange bg-clip-text text-transparent;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 font-body font-semibold text-white shadow-glow transition-all duration-300 hover:bg-blue-600 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-slate-600 px-6 py-3.5 font-body font-semibold text-white transition-all duration-300 hover:border-brand-orange hover:text-brand-orange hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .card {
+    @apply rounded-2xl border border-white/10 bg-navy-700/60 backdrop-blur-sm transition-all duration-300;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
