@@ -98,9 +98,7 @@ export default function Header() {
               {link.label}
             </NavLink>
           ))}
-          <Link to="/contact" onClick={() => setOpen(false)} className="btn-primary mt-4 w-full">
-            Get Started
-          </Link>
+          
         </nav>
       </div>
     </header>
