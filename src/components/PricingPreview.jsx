@@ -9,7 +9,7 @@ export default function PricingPreview() {
   const linkRef = useReveal()
 
   return (
-    <section className="relative py-24 sm:py-28 bg-navy-800/60">
+    <section className="relative py-24 sm:py-28 bg-navy-500/60">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <SectionHeading
           eyebrow="Pricing"

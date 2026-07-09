@@ -27,7 +27,7 @@ export default function ServiceDetail({
       id={id}
       aria-labelledby={`${id}-heading`}
       className={`scroll-mt-24 py-16 sm:py-20 border-t border-white/5 ${
-        altBg ? 'bg-navy-800/40' : 'bg-navy-900'
+        altBg ? 'bg-navy-500/40' : 'bg-navy-600'
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">

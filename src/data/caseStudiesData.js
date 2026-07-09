@@ -22,7 +22,7 @@ export const CASE_STUDIES = [
     ],
     testimonial: {
       quote:
-        'We went from 12 calls a month to over 80. Absolutely incredible results — RankBoost is the real deal.',
+        'We went from 12 calls a month to over 80. Absolutely incredible results — AdAlchemy is the real deal.',
       name: 'Sarah Mitchell',
       role: 'Owner, Mitchell\u2019s Plumbing Co.',
     },
@@ -85,7 +85,7 @@ export const CASE_STUDIES = [
     ],
     testimonial: {
       quote:
-        'Last season was our best ever — by far. We\u2019re booked out six weeks in advance now. Couldn\u2019t have done it without RankBoost.',
+        'Last season was our best ever — by far. We’re booked out six weeks in advance now. Couldn’t have done it without AdAlchemy.',
       name: 'Marcus Webb',
       role: 'Owner, Desert Bloom Landscaping',
     },

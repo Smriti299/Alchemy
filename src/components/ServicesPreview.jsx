@@ -63,7 +63,7 @@ function ServiceCard({ icon: Icon, title, desc, index }) {
 
 export default function ServicesPreview() {
   return (
-    <section id="services" className="relative py-24 sm:py-28 bg-navy-900">
+    <section id="services" className="relative py-24 sm:py-28 bg-navy-500">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <SectionHeading
           eyebrow="What We Do"

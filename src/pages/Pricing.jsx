@@ -27,7 +27,7 @@ export default function Pricing() {
       </section>
 
       {/* Plan cards */}
-      <section className="py-16 sm:py-20 bg-navy-900">
+      <section className="py-16 sm:py-20 bg-navy-500">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {PLANS.map((plan) => (
@@ -38,7 +38,7 @@ export default function Pricing() {
       </section>
 
       {/* Full feature comparison */}
-      <section className="py-16 sm:py-20 bg-navy-800/40 border-t border-white/5">
+      <section className="py-16 sm:py-20 bg-navy-500/40 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <SectionHeading
             eyebrow="Compare Plans"
@@ -63,7 +63,7 @@ export default function Pricing() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 sm:py-20 bg-navy-900 border-t border-white/5">
+      <section className="py-16 sm:py-20 bg-navy-500 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <SectionHeading
             eyebrow="Questions"

@@ -34,7 +34,7 @@ export const TEAM = [
   {
     name: 'Marcus Reynolds',
     role: 'CEO & Founder',
-    bio: '15+ years in digital marketing. Former Google Ads specialist. Built RankBoost from a 3-person shop to one of the top local SEO agencies in the USA.',
+    bio: '15+ years in digital marketing. Former Google Ads specialist. Built AdAlchemy from a 3-person shop to one of the top local SEO agencies in the USA.',
   },
   {
     name: 'Priya Patel',

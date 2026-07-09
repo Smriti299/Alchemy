@@ -22,7 +22,7 @@ const SOCIALS = ['X', 'In', 'Ig', 'Fb']
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-950 border-t border-white/10 pt-16 pb-8">
+    <footer className="bg-navy-750 border-t border-white/10 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand column */}
@@ -44,7 +44,7 @@ export default function Footer() {
                 <IconMail className="w-4 h-4 text-brand-orange" /> info@adalchemymarketing.com
               </li>
               <li className="flex items-center gap-2.5">
-                <IconPhone className="w-4 h-4 text-brand-orange" /> 8069409467
+                <IconPhone className="w-4 h-4 text-brand-orange" /> 9319098456
               </li>
               <li className="flex items-center gap-2.5">
                 <IconPin className="w-4 h-4 text-brand-orange" /> Ashok Vihar , Gurugram

@@ -14,7 +14,7 @@ export default function About() {
       <section className="relative pt-40 pb-20 sm:pt-48 sm:pb-24 overflow-hidden bg-brand-gradient-radial">
         <div ref={heroRef} className="reveal relative max-w-5xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-14">
-            <span className="eyebrow mb-6 inline-block">About RankBoost</span>
+            <span className="eyebrow mb-6 inline-block">About AdAlchemy</span>
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-black leading-tight mb-6">
               We Help Local Businesses <span className="gradient-text">Win on Google</span>
             </h1>
@@ -23,7 +23,7 @@ export default function About() {
           <div className="grid lg:grid-cols-3 gap-10 items-start">
             <div className="lg:col-span-2 space-y-5">
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-                RankBoost is a USA-based digital marketing agency founded in 2014. Our mission is
+                AdAlchemy is a USA-based digital marketing agency founded in 2014. Our mission is
                 simple: help local businesses dominate Google search and turn online visibility
                 into real revenue.
               </p>
@@ -47,7 +47,7 @@ export default function About() {
       </section>
 
       {/* What Drives Us */}
-      <section className="py-20 sm:py-24 bg-navy-900">
+      <section className="py-20 sm:py-24 bg-navy-600">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <SectionHeading
             eyebrow="Our Values"
@@ -63,7 +63,7 @@ export default function About() {
       </section>
 
       {/* Meet the team */}
-      <section className="py-20 sm:py-24 bg-navy-800/40 border-t border-white/5">
+      <section className="py-20 sm:py-24 bg-navy-600/40 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <SectionHeading
             eyebrow="Our Team"

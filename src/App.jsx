@@ -10,7 +10,7 @@ import Contact from './pages/Contact'
 
 function Layout({ children }) {
   return (
-    <div className="min-h-screen bg-navy-900">
+    <div className="min-h-screen bg-navy-700">
       <Header />
       <main>{children}</main>
       <Footer />

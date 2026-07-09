@@ -1,9 +1,9 @@
 import { IconMail, IconPhone, IconPin } from './Icons'
 
 const ITEMS = [
-  { icon: IconPhone, label: 'Call us', value: '8069409467' },
+  { icon: IconPhone, label: 'Call us', value: '9319098456' },
   { icon: IconMail, label: 'Email us', value: 'info@adalchemymarketing.com' },
-  { icon: IconPin, label: 'Visit us', value: 'Ashok Vihar , Phase-3 , Gurugram-122017s' },
+  { icon: IconPin, label: 'Visit us', value: 'Ashok Vihar , Phase-3 , Gurugram-122017' },
 ]
 
 export default function ContactInfoCard() {

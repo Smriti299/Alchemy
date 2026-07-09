@@ -30,7 +30,7 @@ export default function CaseStudy() {
       </section>
 
       {/* Case studies */}
-      <section className="py-16 sm:py-20 bg-navy-900">
+      <section className="py-16 sm:py-20 bg-navy-600">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 space-y-8">
           {CASE_STUDIES.map((cs) => (
             <CaseStudyCard key={cs.client} {...cs} />

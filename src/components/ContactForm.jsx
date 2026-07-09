@@ -48,7 +48,7 @@ export default function ContactForm() {
             value={form.name}
             onChange={handleChange}
             placeholder="Jane Doe"
-            className="w-full rounded-lg bg-navy-800 border border-white/10 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-orange focus:outline-none transition-colors"
+            className="w-full rounded-lg bg-navy-600 border border-white/10 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-orange focus:outline-none transition-colors"
           />
         </div>
         <div>
@@ -63,7 +63,7 @@ export default function ContactForm() {
             value={form.email}
             onChange={handleChange}
             placeholder="jane@company.com"
-            className="w-full rounded-lg bg-navy-800 border border-white/10 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-orange focus:outline-none transition-colors"
+            className="w-full rounded-lg bg-navy-600 border border-white/10 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-orange focus:outline-none transition-colors"
           />
         </div>
       </div>
@@ -80,7 +80,7 @@ export default function ContactForm() {
             value={form.phone}
             onChange={handleChange}
             placeholder="(555) 000-0000"
-            className="w-full rounded-lg bg-navy-800 border border-white/10 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-orange focus:outline-none transition-colors"
+            className="w-full rounded-lg bg-navy-600 border border-white/10 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-orange focus:outline-none transition-colors"
           />
         </div>
         <div>
@@ -94,7 +94,7 @@ export default function ContactForm() {
             value={form.website}
             onChange={handleChange}
             placeholder="yourcompany.com"
-            className="w-full rounded-lg bg-navy-800 border border-white/10 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-orange focus:outline-none transition-colors"
+            className="w-full rounded-lg bg-navy-600 border border-white/10 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-orange focus:outline-none transition-colors"
           />
         </div>
       </div>
@@ -110,7 +110,7 @@ export default function ContactForm() {
           value={form.challenge}
           onChange={handleChange}
           placeholder="Tell us a bit about your goals..."
-          className="w-full rounded-lg bg-navy-800 border border-white/10 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-orange focus:outline-none transition-colors resize-none"
+          className="w-full rounded-lg bg-navy-600 border border-white/10 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-orange focus:outline-none transition-colors resize-none"
         />
       </div>
 
