@@ -2,16 +2,14 @@ import { useState } from 'react'
 import { IconArrowRight } from './Icons'
 
 const initialState = { name: '', email: '', phone: '', website: '', challenge: '' }
-// Apps Script web-app URLs are public client endpoints. Keeping this value here
-// ensures every deployment uses the verified endpoint, even if a hosting
-// provider has an old VITE_GOOGLE_SHEET_WEBHOOK_URL environment variable.
-const webhookUrl = 'https://script.google.com/macros/s/AKfycbxLs7iA6blGdX5Dl3Fsopx5wLmBHsGIgBbJJlYFNHEeg70joh2sIr_p_4YoGwMWcHw/exec'
 
 export default function ContactForm() {
   const [form, setForm] = useState(initialState)
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState('')
+
+  const webhookUrl = import.meta.env.VITE_GOOGLE_SHEET_WEBHOOK_URL?.trim()
 
   const handleChange = (e) => {
     const { name, value } = e.target
