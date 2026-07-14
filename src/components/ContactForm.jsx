@@ -6,16 +6,75 @@ const initialState = { name: '', email: '', phone: '', website: '', challenge: '
 export default function ContactForm() {
   const [form, setForm] = useState(initialState)
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState('')
+
+  const webhookUrl = import.meta.env.VITE_GOOGLE_SHEET_WEBHOOK_URL?.trim()
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setForm((f) => ({ ...f, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // In production this would post to a backend / CRM endpoint.
-    setSubmitted(true)
+    setError('')
+
+    if (!webhookUrl) {
+      setError('Contact webhook URL is not configured. Add VITE_GOOGLE_SHEET_WEBHOOK_URL to your .env and restart Vite.')
+      return
+    }
+
+    try {
+      new URL(webhookUrl)
+    } catch {
+      setError('Configured webhook URL is invalid. Check VITE_GOOGLE_SHEET_WEBHOOK_URL in your .env.')
+      return
+    }
+
+    setSending(true)
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        redirect: 'follow',
+        headers: {
+          'Content-Type': 'text/plain',
+        },
+        body: JSON.stringify(form),
+      })
+
+      if (!response.ok) {
+        const text = await response.text()
+        throw new Error(`Request failed: ${response.status} ${text}`)
+      }
+
+      let data
+      try {
+        data = await response.json()
+      } catch (parseError) {
+        const text = await response.text()
+        throw new Error(`Invalid webhook response: ${text || response.status}`)
+      }
+
+      if (data.result !== 'success') {
+        throw new Error(data.message || 'Google Sheets webhook returned an error.')
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      console.error('Contact form submission failed', err)
+      const message = err?.message || 'Unable to send your request. Please try again later.'
+      if (message === 'Failed to fetch' || message.includes('NetworkError')) {
+        setError('Unable to reach the webhook endpoint. Check your Apps Script deployment URL, access settings, and CORS permissions.')
+      } else {
+        setError(message)
+      }
+    } finally {
+      setSending(false)
+    }
   }
 
   if (submitted) {
@@ -114,8 +173,11 @@ export default function ContactForm() {
         />
       </div>
 
-      <button type="submit" className="btn-primary w-full">
-        Get Your Free SEO Audit
+      {error && (
+        <p className="text-sm text-red-400 text-center">{error}</p>
+      )}
+      <button type="submit" className="btn-primary w-full" disabled={sending}>
+        {sending ? 'Sending…' : 'Get Your Free SEO Audit'}
         <IconArrowRight className="w-4 h-4" />
       </button>
       <p className="text-xs text-slate-500 text-center">
