@@ -43,9 +43,11 @@ export default function ContactForm() {
         cache: 'no-cache',
         redirect: 'follow',
         headers: {
-          'Content-Type': 'text/plain',
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
         },
-        body: JSON.stringify(form),
+        // Apps Script exposes standard form data as e.parameter. This avoids
+        // browser preflights and supports both new and existing deployments.
+        body: new URLSearchParams(form).toString(),
       })
 
       if (!response.ok) {
