@@ -2,14 +2,13 @@ import { useState } from 'react'
 import { IconArrowRight } from './Icons'
 
 const initialState = { name: '', email: '', phone: '', website: '', challenge: '' }
+const webhookUrl = 'https://script.google.com/macros/s/AKfycbxNEJcNM01PH0RcYqjKx_1EBG-q-n4_0XVQKUnZuYj74ofB0kH1dQ83EdNhyDEG/exec'
 
 export default function ContactForm() {
   const [form, setForm] = useState(initialState)
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState('')
-
-  const webhookUrl = import.meta.env.VITE_GOOGLE_SHEET_WEBHOOK_URL?.trim()
 
   const handleChange = (e) => {
     const { name, value } = e.target
